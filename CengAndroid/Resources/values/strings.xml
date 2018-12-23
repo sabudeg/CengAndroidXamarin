@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CengAndroid</string>
+    <string name="title_about">About</string>
+    <string name="title_kisiler">Kisiler</string>
+    <string name="title_notifications">Notifications</string>
+  
+  
+  
+  <string name="detail_about">
+    <br>
+    With recent advances in industry and technology, there is an ever increasing demand for expert technical staff on computer technologies. Eskişehir Technical University Computer Engineering Department was founded in 1993 to educate computer engineers equipped with cutting-edge tecnological skills. Our department has a B.Sc. program since 2000-2001 Fall semester. Without making concession of the good quality, both academic staff and the infrastructure are improved in order to keep up with the changes in computer technologies. The aim of the department is to graduate well-educated and conscious computer engineers who obey ethical rules. There are also graduate programs offered by the department.</br>
+
+    Language of instruction is English at the department. Duration of the B.Sc. program is 5 years, one of which is spent at the English preparation school. The department is founded on Iki Eylul campus of Eskişehir Technical University with 5000 m2 footprint.<br></br>
+
+    Computer Engineering Program of Eskişehir Technical University is initially accredited by MÜDEK (Member of EUR-ACE and International Engineering Alliance) from 30 September 2009 until 30 September 2014. Accreditation duration of our department is extended until 30 September 2019.<br></br>
+  </string>
+</resources>
