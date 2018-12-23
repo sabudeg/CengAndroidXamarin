@@ -33,8 +33,7 @@ namespace CengAndroid
                     StartActivity(typeof(KisilerActivity));
                     return true;
                 case Resource.Id.navigation_notifications:
-                    textMessage.SetText(Resource.String.title_notifications);
-                    StartActivity(typeof(MainActivity));
+                    StartActivity(typeof(SendMailActivity));
                     return true;
             }
             return false;

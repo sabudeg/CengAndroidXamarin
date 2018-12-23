@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/ımageView1"
+		android:src="@mipmap/blue_mail_send_icon" />
+	
+	<EditText
+		android:id           ="@+id/toSend"
+		android:layout_width ="match_parent"
+		android:layout_height="wrap_content" />
+
+	<EditText
+		android:id           ="@+id/subject"
+		android:layout_width ="match_parent"
+		android:layout_height="wrap_content" />
+
+	<EditText
+		android:hint="Message"
+		android:id           ="@+id/message"
+		android:layout_width ="match_parent"
+		android:layout_height="150dp" />
+	<Button
+		android:text="Send Maıl"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/sendMailButton" />
+
+</LinearLayout>
