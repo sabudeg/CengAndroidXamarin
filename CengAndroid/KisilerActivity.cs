@@ -21,7 +21,7 @@ namespace CengAndroid
     {
 
         public List<Person> People = new List<Person>();
-        private ListView mListView;
+        public ListView mListView;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -31,7 +31,7 @@ namespace CengAndroid
             BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
             navigation.SetOnNavigationItemSelectedListener(this);
 
-            mListView = FindViewById(Resource.Id.MyListView);
+            mListView = FindViewById<ListView>(Resource.Id.myListView);
 
             People.Add(new Person("Dr.Öğr.Üyesi Ahmet ARSLAN", "Mail: aarslan2@anadolu.edu.tr", "+90 (222) 321 35 50 / 6553", "http://ceng.eskisehir.edu.tr/img/aarslan2.jpg"));
             People.Add(new Person("Dr.Öğr.Üyesi Ahmet ARSLAN", "Mail: aarslan2@anadolu.edu.tr", "+90 (222) 321 35 50 / 6553", "http://ceng.eskisehir.edu.tr/img/aarslan2.jpg"));
@@ -114,10 +114,10 @@ namespace CengAndroid
             {
                 View row = convertView;
 
-                //if (row == null )
-                //{
-                //    row = LayoutInflater.From(mContext).Inflate(Resource.Layout.listview_row, null, false);
-                //}
+                if (row == null)
+                {
+                    row = LayoutInflater.From(mContext).Inflate(Resource.Layout.Kisiler, null, false);
+                }
 
                 TextView PersonName = row.FindViewById<TextView>(Resource.Id.PersonName);
                 PersonName.Text = mItems[position].Name;
