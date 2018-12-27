@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	>
+	<item
+		android:id = "@+id/generalSubj"
+		android:title="General"/>
+	<item
+		android:id = "@+id/mentoringSubj"
+		android:title="Mentoring"/>
+	<item
+		android:id = "@+id/courseSubj"
+		android:title="Course Information"/>
+	<item
+		android:id = "@+id/projectSubj"
+		android:title="Project Participation"/>
+	<item
+		android:id = "@+id/notdilenSubj"
+		android:title="Not Dilen"/>
+</menu>

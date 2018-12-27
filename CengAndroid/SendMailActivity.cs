@@ -15,14 +15,20 @@ namespace CengAndroid
     [Activity(Label = "SendMailActivity")]
     public class SendMailActivity : Activity
     {
+        TextView chosenEmail;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.SendMail);
 
-            var toSend = FindViewById<EditText>(Resource.Id.toSend);
-            var subject = FindViewById<EditText>(Resource.Id.subject);
+
+            FindViewById<EditText>(Resource.Id.toSend).Text = Intent.GetStringExtra("emailInfo");
+            FindViewById<EditText>(Resource.Id.subject).Text = Intent.GetStringExtra("subjectInfo");
+
+
+            var subject = Intent.GetStringExtra("subjectInfo");
             var message = FindViewById<EditText>(Resource.Id.message);
             var send = FindViewById<Button>(Resource.Id.sendMailButton);
 
@@ -31,9 +37,9 @@ namespace CengAndroid
                 Intent email = new Intent(Intent.ActionSend);
                 email.PutExtra(Intent.ExtraEmail, new String[]
                 {
-                    toSend.Text.ToString()
+                     Intent.GetStringExtra("emailInfo").ToString()
                 });
-                email.PutExtra(Intent.ExtraSubject, subject.Text.ToString());
+                email.PutExtra(Intent.ExtraSubject, subject);
                 email.PutExtra(Intent.ExtraText, message.Text.ToString());
                 email.SetType("message/rfc822");
                 StartActivity(Intent.CreateChooser(email, "Send email via"));

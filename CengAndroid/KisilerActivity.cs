@@ -10,8 +10,6 @@ using Android.Runtime;
 using Android.Support.Design.Widget;
 using Android.Views;
 using Android.Widget;
-using FFImageLoading;
-using FFImageLoading.Views;
 using Square.Picasso;
 
 namespace CengAndroid
@@ -19,6 +17,7 @@ namespace CengAndroid
     [Activity(Label = "KisilerActivity")]
     public class KisilerActivity : Activity, BottomNavigationView.IOnNavigationItemSelectedListener
     {
+        
 
         public List<Person> People = new List<Person>();
         public ListView mListView;
@@ -28,27 +27,69 @@ namespace CengAndroid
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Kisiler);
 
-            BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
-            navigation.SetOnNavigationItemSelectedListener(this);
+            //BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
+            //navigation.SetOnNavigationItemSelectedListener(this);
 
             mListView = FindViewById<ListView>(Resource.Id.myListView);
 
             People.Add(new Person("Dr.Öğr.Üyesi Ahmet ARSLAN", "Mail: aarslan2@anadolu.edu.tr", "+90 (222) 321 35 50 / 6553", "http://ceng.eskisehir.edu.tr/img/aarslan2.jpg"));
-            People.Add(new Person("Dr.Öğr.Üyesi Ahmet ARSLAN", "Mail: aarslan2@anadolu.edu.tr", "+90 (222) 321 35 50 / 6553", "http://ceng.eskisehir.edu.tr/img/aarslan2.jpg"));
-            People.Add(new Person("Dr.Öğr.Üyesi Ahmet ARSLAN", "Mail: aarslan2@anadolu.edu.tr", "+90 (222) 321 35 50 / 6553", "http://ceng.eskisehir.edu.tr/img/aarslan2.jpg"));
-            People.Add(new Person("Dr.Öğr.Üyesi Ahmet ARSLAN", "Mail: aarslan2@anadolu.edu.tr", "+90 (222) 321 35 50 / 6553", "http://ceng.eskisehir.edu.tr/img/aarslan2.jpg"));
+            People.Add(new Person("Prof.Dr. Yaşar HOŞCAN", "Mail: hoscan@anadolu.edu.tr", "+90 (222) 321 35 50 / 6558", "http://ceng.eskisehir.edu.tr/img/aarslan2.jpg"));
+            People.Add(new Person("Assoc.Prof.Dr. Serkan GÜNAL", "Mail: serkangunal@anadolu.edu.tr", "+90 (222) 321 35 50 / 6567", "http://ceng.eskisehir.edu.tr/img/aarslan2.jpg"));
+            People.Add(new Person("	Assoc.Prof.Dr. Cihan KALELİ", "Mail: ckaleli@anadolu.edu.tr", "+90 (222) 321 35 50 / 6564", "http://ceng.eskisehir.edu.tr/img/aarslan2.jpg"));
 
             MyListViewAdapter adapter = new MyListViewAdapter(this, People);
 
             mListView.Adapter = adapter;
 
+            Button callBtn = FindViewById<Button>(Resource.Id.callButton);
+            callBtn.Click += delegate {
+                onCallClick();
+            };
+
+            Button mailBtn = FindViewById<Button>(Resource.Id.sendMail);
+            mailBtn.Click += delegate {
+
+                PopupMenu popup = new PopupMenu(this, mailBtn);
+                popup.Inflate(Resource.Layout.popup);
+                
+
+                String chosenSubject;
+
+                popup.MenuItemClick += (s, arg) =>
+                {
+                    chosenSubject = arg.Item.TitleFormatted.ToString();
+                    onSendMailClick(chosenSubject);
+                };
+
+                popup.Show();
+            };
+
         }
 
-        void onSendMailClick(object sender, EventArgs e)
+        void onSendMailClick(String cs)
         {
-            var subject = new Intent(this, typeof(SendMailActivity));
 
+            // String mail = FindViewById<TextView>(Resource.Id.PersonEmail).Text;
+            // Toast.MakeText(this, "Hello from " + mail, ToastLength.Long).Show();
+
+            
+            var emailinfo = FindViewById<TextView>(Resource.Id.PersonEmail);
+            var send = FindViewById<Button>(Resource.Id.sendMail);
+
+                Intent info = new Intent(this, typeof(SendMailActivity));
+                info.PutExtra("emailInfo", emailinfo.Text.ToString().Substring(6));
+                info.PutExtra("subjectInfo", cs);
+                info.SetType("message/rfc822");
+                StartActivity(info);
         }
+
+        void onCallClick()
+        {
+            //sadece ilk call butonu çalışıyor
+            //diğerlerine basınca tepki yok
+            Toast.MakeText(this, "Phone number is: " + FindViewById<TextView>(Resource.Id.PersonPhone).Text, ToastLength.Long).Show();
+        }
+
 
         public bool OnNavigationItemSelected(IMenuItem item)
         {
@@ -67,22 +108,6 @@ namespace CengAndroid
             return false;
         }
 
-
-        public class Person
-        {
-            public string Name { get; set; }
-            public string Email { get; set; }
-            public string Phone { get; set; }
-            public string ImageSource { get; set; }
-
-            public Person(string name, string email, string phone, string imageSource)
-            {
-                Name = name;
-                Email = email;
-                Phone = phone;
-                ImageSource = imageSource;
-            }
-        }
 
         class MyListViewAdapter : BaseAdapter<Person>
         {
@@ -128,13 +153,12 @@ namespace CengAndroid
                 TextView PersonPhone = row.FindViewById<TextView>(Resource.Id.PersonPhone);
                 PersonPhone.Text = mItems[position].Phone;
 
+
+
                 return row;
             }
         }
-
-
-
     }
-
-
 }
+
+

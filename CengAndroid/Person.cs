@@ -12,11 +12,20 @@ using Android.Widget;
 
 namespace CengAndroid
 {
-    class Person
+
+    public class Person
     {
         public string Name { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        public static object ItemsSource { get; internal set; }
+        public string ImageSource { get; set; }
+
+        public Person(string name, string email, string phone, string imageSource)
+        {
+            Name = name;
+            Email = email;
+            Phone = phone;
+            ImageSource = imageSource;
+        }
     }
 }

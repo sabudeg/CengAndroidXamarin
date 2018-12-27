@@ -2354,9 +2354,6 @@ namespace CengAndroid
 			// aapt resource value: 0x7f08009e
 			public const int PersonEmail = 2131230878;
 			
-			// aapt resource value: 0x7f08009c
-			public const int PersonImage = 2131230876;
-			
 			// aapt resource value: 0x7f08009d
 			public const int PersonName = 2131230877;
 			
@@ -2498,6 +2495,9 @@ namespace CengAndroid
 			// aapt resource value: 0x7f08008f
 			public const int coordinator = 2131230863;
 			
+			// aapt resource value: 0x7f0800b7
+			public const int courseSubj = 2131230903;
+			
 			// aapt resource value: 0x7f08006d
 			public const int custom = 2131230829;
 			
@@ -2561,14 +2561,17 @@ namespace CengAndroid
 			// aapt resource value: 0x7f080048
 			public const int fill_vertical = 2131230792;
 			
-			// aapt resource value: 0x7f08009b
-			public const int firstColumn = 2131230875;
+			// aapt resource value: 0x7f08009c
+			public const int firstColumn = 2131230876;
 			
 			// aapt resource value: 0x7f080054
 			public const int @fixed = 2131230804;
 			
 			// aapt resource value: 0x7f080058
 			public const int forever = 2131230808;
+			
+			// aapt resource value: 0x7f0800b5
+			public const int generalSubj = 2131230901;
 			
 			// aapt resource value: 0x7f08000a
 			public const int ghost_view = 2131230730;
@@ -2618,14 +2621,17 @@ namespace CengAndroid
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800bb
-			public const int masked = 2131230907;
+			// aapt resource value: 0x7f0800bf
+			public const int masked = 2131230911;
 			
 			// aapt resource value: 0x7f0800a8
 			public const int media_actions = 2131230888;
 			
-			// aapt resource value: 0x7f0800b8
-			public const int message = 2131230904;
+			// aapt resource value: 0x7f0800b6
+			public const int mentoringSubj = 2131230902;
+			
+			// aapt resource value: 0x7f0800bc
+			public const int message = 2131230908;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2642,17 +2648,17 @@ namespace CengAndroid
 			// aapt resource value: 0x7f08008c
 			public const int navigation = 2131230860;
 			
-			// aapt resource value: 0x7f0800bc
-			public const int navigation_about = 2131230908;
+			// aapt resource value: 0x7f0800c0
+			public const int navigation_about = 2131230912;
 			
 			// aapt resource value: 0x7f080094
 			public const int navigation_header_container = 2131230868;
 			
-			// aapt resource value: 0x7f0800bd
-			public const int navigation_kisiler = 2131230909;
+			// aapt resource value: 0x7f0800c1
+			public const int navigation_kisiler = 2131230913;
 			
-			// aapt resource value: 0x7f0800be
-			public const int navigation_notifications = 2131230910;
+			// aapt resource value: 0x7f0800c2
+			public const int navigation_notifications = 2131230914;
 			
 			// aapt resource value: 0x7f08003b
 			public const int never = 2131230779;
@@ -2662,6 +2668,9 @@ namespace CengAndroid
 			
 			// aapt resource value: 0x7f08001e
 			public const int normal = 2131230750;
+			
+			// aapt resource value: 0x7f0800b9
+			public const int notdilenSubj = 2131230905;
 			
 			// aapt resource value: 0x7f0800b1
 			public const int notification_background = 2131230897;
@@ -2689,6 +2698,9 @@ namespace CengAndroid
 			
 			// aapt resource value: 0x7f080007
 			public const int progress_horizontal = 2131230727;
+			
+			// aapt resource value: 0x7f0800b8
+			public const int projectSubj = 2131230904;
 			
 			// aapt resource value: 0x7f080075
 			public const int radio = 2131230837;
@@ -2765,8 +2777,8 @@ namespace CengAndroid
 			// aapt resource value: 0x7f0800a1
 			public const int sendMail = 2131230881;
 			
-			// aapt resource value: 0x7f0800b9
-			public const int sendMailButton = 2131230905;
+			// aapt resource value: 0x7f0800bd
+			public const int sendMailButton = 2131230909;
 			
 			// aapt resource value: 0x7f080074
 			public const int shortcut = 2131230836;
@@ -2813,8 +2825,8 @@ namespace CengAndroid
 			// aapt resource value: 0x7f0800a7
 			public const int status_bar_latest_event_content = 2131230887;
 			
-			// aapt resource value: 0x7f0800b7
-			public const int subject = 2131230903;
+			// aapt resource value: 0x7f0800bb
+			public const int subject = 2131230907;
 			
 			// aapt resource value: 0x7f080076
 			public const int submenuarrow = 2131230838;
@@ -2861,8 +2873,8 @@ namespace CengAndroid
 			// aapt resource value: 0x7f08006f
 			public const int title_template = 2131230831;
 			
-			// aapt resource value: 0x7f0800b6
-			public const int toSend = 2131230902;
+			// aapt resource value: 0x7f0800ba
+			public const int toSend = 2131230906;
 			
 			// aapt resource value: 0x7f08003e
 			public const int top = 2131230782;
@@ -2900,8 +2912,8 @@ namespace CengAndroid
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800ba
-			public const int visible = 2131230906;
+			// aapt resource value: 0x7f0800be
+			public const int visible = 2131230910;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -2909,8 +2921,8 @@ namespace CengAndroid
 			// aapt resource value: 0x7f08002e
 			public const int wrap_content = 2131230766;
 			
-			// aapt resource value: 0x7f0800b5
-			public const int ımageView1 = 2131230901;
+			// aapt resource value: 0x7f08009b
+			public const int ımageView1 = 2131230875;
 			
 			static Id()
 			{
@@ -3140,22 +3152,25 @@ namespace CengAndroid
 			public const int notification_template_part_time = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int select_dialog_item_material = 2130968633;
+			public const int popup = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int select_dialog_multichoice_material = 2130968634;
+			public const int select_dialog_item_material = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int select_dialog_singlechoice_material = 2130968635;
+			public const int select_dialog_multichoice_material = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int SendMail = 2130968636;
+			public const int select_dialog_singlechoice_material = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int support_simple_spinner_dropdown_item = 2130968637;
+			public const int SendMail = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int tooltip = 2130968638;
+			public const int support_simple_spinner_dropdown_item = 2130968638;
+			
+			// aapt resource value: 0x7f04003f
+			public const int tooltip = 2130968639;
 			
 			static Layout()
 			{
@@ -4510,6 +4525,12 @@ namespace CengAndroid
 			
 			// aapt resource value: 0x7f0a0178
 			public const int Widget_Design_TextInputLayout = 2131362168;
+			
+			// aapt resource value: 0x7f0a0181
+			public const int background = 2131362177;
+			
+			// aapt resource value: 0x7f0a0182
+			public const int button = 2131362178;
 			
 			static Style()
 			{
